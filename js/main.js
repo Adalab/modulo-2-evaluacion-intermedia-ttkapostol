@@ -1,14 +1,11 @@
 'use strict';
 
-console.log(`linked`);
-
-//variables
 const userNumber = document.querySelector('.js__user_number')
 const btn = document.querySelector('.js__btn')
 const tips = document.querySelector('.js__tips')
 const userAttempts = document.querySelector('.js__attempts')
 
-//funciones
+
 
 function getRandomNumber(max) {
 return Math.ceil(Math.random() * max);
@@ -18,9 +15,6 @@ const showMsj = (msj) => {
   tips.innerHTML = msj;
 };
 
-const showMsj2 = (msj) => {
-  userAttempts.innerHTML = msj;
-};
 
 function compare() {
 const number = getRandomNumber(100);
@@ -46,17 +40,9 @@ const getNumber = parseInt(userNumber.value)
   }
 }
 
-/*3. Contar los intentos y pintarlos en js__attempts 
-let attempts = []; 
-const btn2 = document.querySelector('.js__btn2');
-for (i=0; < attempts.length; i++) {
-} btn2.addEventListener("click", function(){
-}*/
-
-
 function handleClickBtn(event) {
   event.preventDefault();
   validateIput();
 }
 
-btn1.addEventListener ('click', handleClickBtn);
+btn.addEventListener ('click', handleClickBtn);
