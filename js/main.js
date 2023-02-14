@@ -46,14 +46,17 @@ const getNumber = parseInt(userNumber.value)
   }
 }
 
-//3. Contar los intentos y pintarlos en js__attempts 
+/*3. Contar los intentos y pintarlos en js__attempts 
+let attempts = []; 
+const btn2 = document.querySelector('.js__btn2');
+for (i=0; < attempts.length; i++) {
+} btn2.addEventListener("click", function(){
+}*/
 
-
-//eventos
 
 function handleClickBtn(event) {
   event.preventDefault();
   validateIput();
 }
 
-btn.addEventListener ('click', handleClickBtn);
+btn1.addEventListener ('click', handleClickBtn);
