@@ -4,29 +4,37 @@ const userNumber = document.querySelector('.js__user_number')
 const btn = document.querySelector('.js__btn')
 const tips = document.querySelector('.js__tips')
 const userAttempts = document.querySelector('.js__attempts')
-
-
+let counter = 0
 
 function getRandomNumber(max) {
 return Math.ceil(Math.random() * max);
 }
+
+const number = getRandomNumber(100);
+  console.log(number);
 
 const showMsj = (msj) => {
   tips.innerHTML = msj;
 };
 
 
+function countAttempts (getNumber){
+  if (getNumber !== number){
+  counter++;
+  }
+  userAttempts.innerHTML = counter 
+}
+
 function compare() {
-const number = getRandomNumber(100);
-  console.log(number);
 const getNumber = parseInt(userNumber.value)
   if (getNumber === number) {
     showMsj(`Has ganado campeona!!! :)`);
-  } else if (getNumber < number - 10) {
+  } else if (getNumber < number) {
     showMsj(`Número demasiado bajo :( `);
-  } else if (getNumber > number + 10){
+  } else if (getNumber > number){
     showMsj(`Número demasiado alto :( `);
   }
+countAttempts (getNumber);
 }
 
 function validateIput() {
@@ -45,4 +53,4 @@ function handleClickBtn(event) {
   validateIput();
 }
 
-btn.addEventListener ('click', handleClickBtn);
+btn.addEventListener('click', handleClickBtn);
