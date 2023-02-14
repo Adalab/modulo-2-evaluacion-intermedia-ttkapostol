@@ -8,28 +8,32 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-   <header>
-        <h1>Adivína el número</h1>
+   <header class="header">
+        <h1 class="header__title">Adivína el número</h1>
    </header> 
 
-   <main>
-        <form action="#" class="form">
+   <main class="main">
+        <form action="#" class="main__form">
             <input 
             class="user__number js__user_number" 
             type="text" 
-            placeholder="Ej: 67" />      
-            <input class="button js__btn" type="button" value="Prueba" />
+            placeholder="Ej: 67" /> 
+
+            <input 
+            class="button js__btn" 
+            type="button" 
+            value="Prueba" />
         
         </form>
 
-        <article>
-            <h2>Pista:</h2>
-            <p class="tips js__tips"> Escribe un número y dale al botón "Prueba"</p>
+        <article class="article1">
+            <h2 class="article1__subtitle_1">Pista:</h2>
+            <p class="article1__p js__tips"> Escribe un número y dale al botón "Prueba"</p>
         </article>
 
-        <article>
-            <h2>Número de intentos:</h2>
-            <p class="attempts js__attempts"> 0 </p>
+        <article class="article2">
+            <h3 class="article2__subtitle_2"> Número de intentos: </h3>
+            <p class="article2__p js__attempts"> 0 </p>
         </article>
    </main>
 

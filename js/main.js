@@ -17,7 +17,6 @@ const showMsj = (msj) => {
   tips.innerHTML = msj;
 };
 
-
 function countAttempts (getNumber){
   if (getNumber !== number){
   counter++;
@@ -33,7 +32,7 @@ const getNumber = parseInt(userNumber.value)
     showMsj(`Número demasiado bajo :( `);
   } else if (getNumber > number){
     showMsj(`Número demasiado alto :( `);
-  }
+  } else {}
 countAttempts (getNumber);
 }
 
