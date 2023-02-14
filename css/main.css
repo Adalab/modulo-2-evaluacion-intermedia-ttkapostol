@@ -19,7 +19,7 @@
 }
 
 .header__title {
-    margin-top: 150px;
+    margin-top: 100px;
     color: #7bb8e0;
 }
 
@@ -97,4 +97,22 @@ input[type=button]:hover:before {
     color: #fbe0dd;
     font-size: 20px;
     text-align: center;
+}
+
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.msj1 {
+    background-image: url('../images/try-again.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.msj2 {
+    background-image: url('../images/well-done.png');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
