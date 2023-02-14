@@ -51,6 +51,31 @@ input[type=button] {
     background-color: #8981ba;
     color: #f3f2f8;
     font-size: 20px;
+    border: 1px solid rgb(130, 132, 249);
+    position: relative;
+    overflow: hidden;
+}
+
+input[type=button]:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 147, 250, 0.4);
+}
+
+input[type=button]:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(170, 172, 254, 0.4),
+            transparent);
+    transition: all 650ms;
+}
+
+input[type=button]:hover:before {
+    left: 100%;
 }
 
 .article1__subtitle_1 {
