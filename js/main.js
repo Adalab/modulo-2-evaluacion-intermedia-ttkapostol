@@ -27,6 +27,11 @@ function countAttempts (getNumber){
   userAttempts.innerHTML = counter 
 }
 
+function resetAttempts (){
+  let counter = 0;
+  userAttempts.innerHTML = counter;
+}
+
 function winningMsj() {
   picture.classList.add('msj2');
   picture.classList.remove('msj1');
@@ -73,8 +78,8 @@ function handleClickResetBtn(event) {
   event.preventDefault();
   const number = getRandomNumber(100);
   console.log(number);
-  userAttempts.innerHTML = 0;
   userNumber.value = '';
+  resetAttempts ()
 }
 
 btn.addEventListener('click', handleClickBtn);
