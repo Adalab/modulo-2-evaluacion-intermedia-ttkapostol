@@ -5,7 +5,9 @@ const btn = document.querySelector('.js__btn')
 const tips = document.querySelector('.js__tips')
 const userAttempts = document.querySelector('.js__attempts')
 const picture = document.querySelector('.js__image')
+const resetBtn = document.querySelector('.js__reset_btn')
 let counter = 0
+
 
 function getRandomNumber(max) {
 return Math.ceil(Math.random() * max);
@@ -67,4 +69,13 @@ function handleClickBtn(event) {
   processInput();
 }
 
+function handleClickResetBtn(event) {
+  event.preventDefault();
+  const number = getRandomNumber(100);
+  console.log(number);
+  userAttempts.innerHTML = 0;
+  userNumber.value = '';
+}
+
 btn.addEventListener('click', handleClickBtn);
+resetBtn.addEventListener('click', handleClickResetBtn)
