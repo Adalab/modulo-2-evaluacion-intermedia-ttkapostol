@@ -3,7 +3,7 @@
 const userNumber = document.querySelector('.js__user_number')
 const btn = document.querySelector('.js__btn')
 const tips = document.querySelector('.js__tips')
-const userAttempts = document.querySelector('.js__attempts')
+let userAttempts = document.querySelector('.js__attempts')
 const picture = document.querySelector('.js__image')
 const resetBtn = document.querySelector('.js__reset_btn')
 let counter = 0
@@ -24,11 +24,10 @@ function countAttempts (getNumber){
   if (getNumber !== number){
   counter++;
   }
-  userAttempts.innerHTML = counter 
+  userAttempts.innerHTML = counter;
 }
 
-function resetAttempts (){
-  let counter = 0;
+function resetAttempts (counter){
   userAttempts.innerHTML = counter;
 }
 
@@ -79,7 +78,7 @@ function handleClickResetBtn(event) {
   const number = getRandomNumber(100);
   console.log(number);
   userNumber.value = '';
-  resetAttempts ()
+  resetAttempts(0)
 }
 
 btn.addEventListener('click', handleClickBtn);
