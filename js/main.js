@@ -41,6 +41,11 @@ picture.classList.add('msj1');
 picture.classList.remove('msj2');
 }
 
+function resetMsj() {
+  picture.classList.remove('msj1');
+  picture.classList.remove('msj2');
+}
+
 
 function compare() {
 const getNumber = parseInt(userNumber.value)
@@ -78,6 +83,7 @@ function handleClickResetBtn(event) {
   const number = getRandomNumber(100);
   console.log(number);
   userNumber.value = '';
+  resetMsj ()
   resetAttempts(0)
 }
 
