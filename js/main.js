@@ -28,6 +28,7 @@ function countAttempts (getNumber){
 }
 
 function resetAttempts (counter){
+  counter = 0;
   userAttempts.innerHTML = counter;
 }
 
@@ -83,6 +84,7 @@ function handleClickResetBtn(event) {
   const number = getRandomNumber(100);
   console.log(number);
   userNumber.value = '';
+  showMsj('Escribe un número nuevo y dale al botón "Prueba"');
   resetMsj ()
   resetAttempts(0)
 }
