@@ -27,7 +27,7 @@ function countAttempts (getNumber){
   userAttempts.innerHTML = counter;
 }
 
-function resetAttempts (counter){
+function resetAttempts (){
   counter = 0;
   userAttempts.innerHTML = counter;
 }
@@ -42,7 +42,7 @@ picture.classList.add('msj1');
 picture.classList.remove('msj2');
 }
 
-function resetMsj() {
+function resetMsjImage() {
   picture.classList.remove('msj1');
   picture.classList.remove('msj2');
 }
@@ -85,8 +85,8 @@ function handleClickResetBtn(event) {
   console.log(number);
   userNumber.value = '';
   showMsj('Escribe un número nuevo y dale al botón "Prueba"');
-  resetMsj ()
-  resetAttempts(0)
+  resetMsjImage ()
+  resetAttempts()
 }
 
 btn.addEventListener('click', handleClickBtn);
